@@ -1,0 +1,1 @@
+# Lokshaba-election-2024-SQL-project
