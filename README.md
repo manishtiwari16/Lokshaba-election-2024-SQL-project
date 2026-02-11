@@ -6,5 +6,5 @@ Faced with the challenge of analysing vast dataset related to the 2024 General E
 
 •	Executed complex SQL queries to analyse voting pattern and demographic trends, generating meaningful insights.
 
-•	Delivered a robust analytical tool that enhanced data accessibility and understanding of voter behaviour, leading to a 30% increase in 
+•	Delivered a robust analytical tool that has enhanced data accessibility and understanding of voter behaviour, leading to a 30% increase in 
   stakeholders engagement. 
