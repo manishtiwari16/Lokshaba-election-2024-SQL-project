@@ -1,3 +1,5 @@
+#2024 GENERAL ELCETION ANALYSIS ON SQL
+
 
 create database Election
 
@@ -246,6 +248,7 @@ join partywise_results as p on c.party_id=p.Party_ID
 join statewise_results as s on c.Parliament_Constituency=s.Parliament_Constituency
 join states on s.State_ID=states.State_ID
 where states.State='Maharashtra'
+
 
 
 
