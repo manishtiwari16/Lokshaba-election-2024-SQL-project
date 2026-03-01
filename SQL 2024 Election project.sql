@@ -15,11 +15,13 @@ select distinct count(parliament_constituency)as total_seats from constituencywi
 
 
 --what are the total number  of seats  available for election in each state
-select states.State,count(s.Constituency)as total_seats from constituencywise_results c 
-join statewise_results s on c.Parliament_Constituency=s.Parliament_Constituency
-join states on s.State_ID=states.State_ID
-group by states.State
-order by total_seats desc
+select state,constituency,sum(constituency) over() from
+(
+select states.state, count(sr.constituency) as constituency
+from statewise_results as sr
+join states on sr.State_ID=states.state_id
+group by states.state)
+as t
 
 
 --seats won by NDA allience party
@@ -247,6 +249,7 @@ join partywise_results as p on c.party_id=p.Party_ID
 join statewise_results as s on c.Parliament_Constituency=s.Parliament_Constituency
 join states on s.State_ID=states.State_ID
 where states.State='Maharashtra'
+
 
 
 
