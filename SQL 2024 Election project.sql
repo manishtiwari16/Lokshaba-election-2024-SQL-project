@@ -9,8 +9,7 @@ select * from states
 select * from statewise_results
 select * from partywise_results
 
-select constituency_name from constituencywise_results where constituency_id='U084'
-select constituency_id from constituencywise_details where constituency_id='U084'
+
 --Total seats
 select distinct count(parliament_constituency)as total_seats from constituencywise_results
 
@@ -248,6 +247,7 @@ join partywise_results as p on c.party_id=p.Party_ID
 join statewise_results as s on c.Parliament_Constituency=s.Parliament_Constituency
 join states on s.State_ID=states.State_ID
 where states.State='Maharashtra'
+
 
 
 
